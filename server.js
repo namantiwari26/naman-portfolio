@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const PORT = process.env.PORT || 3000;
+const HOST = '0.0.0.0';
 const BASE_DIR = __dirname;
 
 const MIME_TYPES = {
@@ -17,6 +18,10 @@ const MIME_TYPES = {
   '.svg': 'image/svg+xml',
   '.ico': 'image/x-icon',
   '.webp': 'image/webp',
+  '.woff': 'font/woff',
+  '.woff2': 'font/woff2',
+  '.ttf': 'font/ttf',
+  '.mp4': 'video/mp4',
 };
 
 const server = http.createServer((req, res) => {
@@ -44,13 +49,13 @@ const server = http.createServer((req, res) => {
     const ext = path.extname(filePath).toLowerCase();
     const contentType = MIME_TYPES[ext] || 'application/octet-stream';
 
-    // Cache static assets like images for instant smooth scrubbing
+    // Cache static assets (like the 300-frame sequence) for smooth scrubbing
     const headers = {
       'Content-Type': contentType,
       'Access-Control-Allow-Origin': '*',
     };
 
-    if (ext === '.jpg' || ext === '.png' || ext === '.webp') {
+    if (ext === '.jpg' || ext === '.png' || ext === '.webp' || ext === '.svg') {
       headers['Cache-Control'] = 'public, max-age=86400, immutable';
     }
 
@@ -59,6 +64,6 @@ const server = http.createServer((req, res) => {
   });
 });
 
-server.listen(PORT, () => {
-  console.log(`Server running at http://localhost:${PORT}/`);
+server.listen(PORT, HOST, () => {
+  console.log(`Server running at http://${HOST}:${PORT}/`);
 });
