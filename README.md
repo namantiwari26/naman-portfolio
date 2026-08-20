@@ -91,9 +91,8 @@ npx serve .
 ├── js/
 │   ├── config.js       # Centralized portfolio & project link configuration
 │   └── main.js         # Canvas engine, scroll listeners & link injector
-├── .gitignore          # Git ignore rules for node_modules, logs, and .vercel
+├── .gitignore          # Git ignore rules for logs and .vercel
 ├── index.html          # Main portfolio layout and root entrypoint
-├── package.json        # Project metadata & build scripts
 ├── style.css           # Design tokens, layouts, cards & micro-animations
 ├── vercel.json         # Vercel edge caching configuration
 └── README.md           # Project documentation
