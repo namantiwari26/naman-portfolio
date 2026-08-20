@@ -6,9 +6,9 @@
   <strong>Computer Vision · Machine Learning · Full-Stack Systems · Autonomous AI</strong>
 </p>
 
-[![Live Demo](https://img.shields.io/badge/Live_Portfolio-naman--portfolio.onrender.com-ff5722?style=for-the-badge&logo=render&logoColor=white)](https://naman-portfolio-iz28.onrender.com/)
 [![GitHub](https://img.shields.io/badge/GitHub-namantiwari26-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/namantiwari26)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Naman_Tiwari-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/naman-tiwari-275a612a2)
+[![Vercel Ready](https://img.shields.io/badge/Vercel-Production_Ready-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com)
 
 <br />
 
@@ -19,12 +19,6 @@
 
 ---
 
-## 🌟 Live Demo
-
-🔗 **Explore Live:** [https://naman-portfolio-iz28.onrender.com/](https://naman-portfolio-iz28.onrender.com/)
-
----
-
 ## ✨ Key Features & Architecture
 
 - 🎞️ **300-Frame Canvas Scrubbing Engine:** HTML5 Canvas sequence scrubbing driven by scroll progress with retina DPI scaling and LERP sub-pixel interpolation.
@@ -32,7 +26,7 @@
 - 💡 **Interactive Glowing Project Cards:** Custom radial glow hover physics, card elevation, and smooth sibling dimming effects.
 - 🪐 **Centered Floating Tech Constellation:** Glassmorphic, floating badge cloud representing languages, frameworks, and tools.
 - ⚙️ **Centralized Link Architecture:** Single source of truth (`config.js`) for all social, repository, and external links.
-- ⚡ **Zero-Dependency Native Server:** High-performance Node.js static server with MIME streaming and caching headers, tailored for Render deployment.
+- ⚡ **Zero-Overhead Edge Deployment:** Production-optimized static web architecture ready for instant Vercel deployment with edge-cached assets and immutable frame caching.
 
 ---
 
@@ -43,9 +37,9 @@
 - **Graphics & Animation:** HTML5 Canvas API, Lenis Scroll, CSS Glassmorphism
 - **Typography:** *Plus Jakarta Sans*, *JetBrains Mono*
 
-### Backend & Deployment
-- **Server:** Node.js (Native `http`, `fs`, `path` modules)
-- **Deployment Platform:** [Render](https://render.com/) (Web Service on `0.0.0.0`)
+### Deployment & Hosting
+- **Platform:** [Vercel](https://vercel.com/) (Edge Static CDN)
+- **Configuration:** `vercel.json` with immutable asset caching and SPA routing
 
 ---
 
@@ -63,7 +57,7 @@
 
 ## 💻 Local Development
 
-Clone the repository and start the local development server:
+Clone the repository and preview locally:
 
 ```bash
 # 1. Clone the repository
@@ -72,11 +66,21 @@ git clone https://github.com/namantiwari26/naman-portfolio.git
 # 2. Navigate to the project directory
 cd naman-portfolio
 
-# 3. Start the zero-dependency Node server
-node server.js
+# 3. Preview locally with any static server (e.g. npx serve, VS Code Live Server, or Python HTTP)
+npx serve .
 ```
 
-Open **[http://localhost:3000](http://localhost:3000)** in your browser.
+---
+
+## 🚀 Deploying to Vercel
+
+1. Push your code to GitHub.
+2. Import the repository into **[Vercel](https://vercel.com/)**.
+3. Vercel will automatically detect the static project:
+   - **Framework Preset:** Other / None (Static)
+   - **Build Command:** `npm run build` (or leave default)
+   - **Output Directory:** `.` (root)
+4. Click **Deploy**.
 
 ---
 
@@ -84,13 +88,14 @@ Open **[http://localhost:3000](http://localhost:3000)** in your browser.
 
 ```text
 ├── Frames/             # 300-frame image sequence for scroll animation
+├── .gitignore          # Git ignore rules for node_modules, logs, and .vercel
 ├── config.js           # Centralized portfolio & project link configuration
 ├── index.html          # Main portfolio layout and semantic structure
 ├── main.js             # Canvas engine, scroll listeners & link injector
-├── package.json        # Node service metadata and start scripts
-├── server.js           # Native Node.js HTTP server for Render deployment
+├── package.json        # Project metadata, build & start scripts
 ├── style.css           # Design tokens, layouts, cards & micro-animations
-└── Readme.md           # Project documentation
+├── vercel.json         # Vercel edge caching & routing configuration
+└── README.md           # Project documentation
 ```
 
 ---

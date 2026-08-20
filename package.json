@@ -2,9 +2,9 @@
   "name": "naman-portfolio",
   "version": "1.0.0",
   "description": "Naman Tiwari - Software Developer Portfolio",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "build": "echo \"Build complete\"",
+    "start": "npx serve ."
   },
   "engines": {
     "node": ">=18.0.0"
