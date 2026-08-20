@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "Naman Tiwari - Software Developer Portfolio",
   "scripts": {
-    "build": "echo \"Build complete\"",
-    "start": "npx serve ."
+    "build": "echo \"Build complete\""
   },
   "engines": {
     "node": ">=18.0.0"

@@ -11,19 +11,13 @@
       ]
     },
     {
-      "source": "/(style\\.css|main\\.js|config\\.js)",
+      "source": "/(.*)\\.(css|js)",
       "headers": [
         {
           "key": "Cache-Control",
           "value": "public, max-age=86400, stale-while-revalidate=604800"
         }
       ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/((?!.*\\..*).*)",
-      "destination": "/index.html"
     }
   ]
 }
