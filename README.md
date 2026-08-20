@@ -88,13 +88,14 @@ npx serve .
 
 ```text
 ├── Frames/             # 300-frame image sequence for scroll animation
+├── js/
+│   ├── config.js       # Centralized portfolio & project link configuration
+│   └── main.js         # Canvas engine, scroll listeners & link injector
 ├── .gitignore          # Git ignore rules for node_modules, logs, and .vercel
-├── config.js           # Centralized portfolio & project link configuration
-├── index.html          # Main portfolio layout and semantic structure
-├── main.js             # Canvas engine, scroll listeners & link injector
-├── package.json        # Project metadata, build & start scripts
+├── index.html          # Main portfolio layout and root entrypoint
+├── package.json        # Project metadata & build scripts
 ├── style.css           # Design tokens, layouts, cards & micro-animations
-├── vercel.json         # Vercel edge caching & routing configuration
+├── vercel.json         # Vercel edge caching configuration
 └── README.md           # Project documentation
 ```
 
